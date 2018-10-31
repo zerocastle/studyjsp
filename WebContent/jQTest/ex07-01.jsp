@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,17 +17,17 @@
 </style>
 <script>
 $(document).ready(function(){
-    $("#b1").click(function(){ //[°á°ú] ¹öÆ°À» Å¬¸¯ÇÏ¸é ÀÚµ¿½ÇÇà
-       //jQTest5.txt¸¦ get ¹æ½ÄÀ¸·Î ¿äÃ»
+    $("#b1").click(function(){ //[ê²°ê³¼] ë²„íŠ¼ì„ í´ë¦­í•˜ë©´ ìë™ì‹¤í–‰
+       //jQTest5.txtë¥¼ get ë°©ì‹ìœ¼ë¡œ ìš”ì²­
        var query={userid:$("#userid").val(),password:$("#password").val()};
        $.ajax({
           type:"POST",
           url: "/studyjsp/MemberServlet",
           data: query,
-          success: function(data){
-             if(data == 1){$("#result").text("·Î±×ÀÎ¼º°ø")}
-             else if(data == 0){$("#result").text("ºñ¹øÆ²¸²")}
-             else if(data == -1){$("#result").text("ºñÈ¸¿ø")}
+          success: function(fuck){
+             if(fuck == 1){$("#result").text("ë¡œê·¸ì¸ì„±ê³µ")}
+             else if(fuck == 0){$("#result").text("ë¹„ë²ˆí‹€ë¦¼")}
+             else if(fuck == -1){$("#result").text("ë¹„íšŒì›")}
              
           }
        });
@@ -38,10 +38,10 @@ $(document).ready(function(){
 </head>
 <body>
 
-<div>¾ÆÀÌµğ : <input type="text" name="userid" id="userid"></div>
-<div>¹øÈ£ : <input type="password" name="password" id="password"></div>
-<div>°á°ú</div>
-<button id = "b1">¹öÆ°</button>
+<div>ì•„ì´ë”” : <input type="text" name="userid" id="userid"></div>
+<div>ë²ˆí˜¸ : <input type="password" name="password" id="password"></div>
+<div>ê²°ê³¼</div>
+<button id = "b1">ë²„íŠ¼</button>
 <div id = "result"></div>
 
 
