@@ -6,8 +6,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Timestamp;
 
-import com.sun.org.apache.xalan.internal.xsltc.compiler.sym;
-
 import dao09.Dao;
 
 public class InsertDo {
